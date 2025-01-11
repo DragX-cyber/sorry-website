@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begging for Forgiveness</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #fbc2eb, #a18cd1);
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #fff;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #6a4c94;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #483475;
+        }
+        .no-button {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Please Forgive Me! 🙏</h1>
+        <p>I’m on my knees, begging for your forgiveness. You’re the most important person in my life.</p>
+        <div class="button-container">
+            <button onclick="goBackToMainPage()">Yes</button>
+            <button class="no-button" onmouseover="moveButton(this)">No</button>
+        </div>
+    </div>
+    <script>
+        function goBackToMainPage() {
+            window.location.href = "sorry4.htm";
+        }
+
+        function moveButton(button) {
+            const randomX = Math.random() * (window.innerWidth - button.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
+        }
+    </script>
+</body>
+</html>
