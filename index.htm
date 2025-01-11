@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #fff;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff3b3b;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        .no-button {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I’m Sorry, My Love ❤️</h1>
+        <p>You mean the world to me, and I never want to hurt you. Please forgive me for my mistake.</p>
+        <div class="button-container">
+            <button onclick="revealMessage()">Yes</button>
+            <button class="no-button" onclick="goToAnotherPage()" onmouseover="moveButton(this)">No</button>
+        </div>
+        <div class="hidden-message" id="hiddenMessage">
+            🥰 Thank you for forgiving me! You make my life so much brighter. 🥰
+        </div>
+    </div>
+    <script>
+        function revealMessage() {
+            const message = document.getElementById('hiddenMessage');
+            message.style.display = 'block';
+        }
+        function goToAnotherPage() {
+            window.location.href = "sorry2.htm";
+        }
+    </script>
+</body>
+</html>
